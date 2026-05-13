@@ -24,12 +24,12 @@ import org.scilab.forge.jlatexmath.TeXConstants;
 import org.scilab.forge.jlatexmath.TeXFormula;
 import org.scilab.forge.jlatexmath.TeXIcon;
 
-import br.com.pereiraeng.io.IOutils;
-import br.com.pereiraeng.io.flow.Flow;
-import br.com.pereiraeng.unicode.Greek;
-import br.com.pereiraeng.unicode.PTC;
 import br.com.pereiraeng.core.ColorUtils;
 import br.com.pereiraeng.core.Direction;
+import br.com.pereiraeng.core.Flow;
+import br.com.pereiraeng.io.IOutils;
+import br.com.pereiraeng.unicode.Greek;
+import br.com.pereiraeng.unicode.PTC;
 
 public class LaTeX {
 
@@ -622,7 +622,7 @@ public class LaTeX {
 
 	// --------------- DRAWING ---------------
 
-	public static final float FONT_SIZE = 30f;
+	public static final float FONT_SIZE = 14f;
 
 	public static void drawLatek(Graphics g, int x, int y, String math) {
 		LaTeX.drawLatek(g, x, y, math, FONT_SIZE, Color.BLACK, Direction.UP_LEFT);
