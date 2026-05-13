@@ -151,17 +151,17 @@ public class LaTeX {
 
 	public static char getChar(String name) {
 		try {
-			BufferedReader br = IOutils.getBr(new File(LaTeX.class.getResource(UNICODE_TABLE).toURI()));
-			br.skip(4101);
-			String s = null;
-			while ((s = br.readLine()) != null) {
-				String[] row = s.split("\\^");
+			BufferedReader reader = IOutils.getBr(new File(LaTeX.class.getResource(UNICODE_TABLE).toURI()));
+			reader.skip(4101);
+			String str = null;
+			while ((str = reader.readLine()) != null) {
+				String[] row = str.split("\\^");
 				if (name.equals(row[2])) {
-					br.close();
+					reader.close();
 					return (char) Integer.parseInt(row[0], 16);
 				}
 			}
-			br.close();
+			reader.close();
 		} catch (IOException | URISyntaxException e) {
 			e.printStackTrace();
 		}
